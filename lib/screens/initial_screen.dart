@@ -34,9 +34,9 @@ class _InitialScreenState extends State<InitialScreen> {
               List<Task>? items = snapshot.data;
               switch (snapshot.connectionState) {
                 case ConnectionState.none:
-                  return Center(
+                  return const Center(
                     child: Column(
-                      children: const [
+                      children: [
                         CircularProgressIndicator(),
                         Text('Carregando'),
                       ],
@@ -44,18 +44,18 @@ class _InitialScreenState extends State<InitialScreen> {
                   );
 
                 case ConnectionState.waiting:
-                  return Center(
+                  return const Center(
                     child: Column(
-                      children: const [
+                      children: [
                         CircularProgressIndicator(),
                         Text('Carregando'),
                       ],
                     ),
                   );
                 case ConnectionState.active:
-                  return Center(
+                  return const Center(
                     child: Column(
-                      children: const [
+                      children: [
                         CircularProgressIndicator(),
                         Text('Carregando'),
                       ],
@@ -71,13 +71,13 @@ class _InitialScreenState extends State<InitialScreen> {
                             return tarefa;
                           });
                     }
-                    return Center(
+                    return const Center(
                         child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       // não implementado em vídeo por descuido meu, desculpem.
                       crossAxisAlignment: CrossAxisAlignment.center,
                       // essa linha de layout deixa o conteudo totalmente centralizado.
-                      children: const [
+                      children: [
                         Icon(
                           Icons.error_outline,
                           size: 128,

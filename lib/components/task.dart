@@ -88,8 +88,8 @@ class _TaskState extends State<Task> {
                       ],
                     ),
                     SizedBox(
-                      height: 52,
-                      width: 52,
+                      height: 65,
+                      width: 65,
                       child: ElevatedButton(
                         onLongPress: (){
                           TaskDao().delete(widget.nome);
